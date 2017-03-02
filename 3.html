@@ -27,23 +27,49 @@
     <div id="map"></div>
     <script>
         function initMap() {
-            var myLatLng = {
+            var australien = {
                 lat: -25.363,
                 lng: 131.044
             };
 
-            var myLatLng2 = {
+            var samsø = {
                 lat: 55.963662,
                 lng: 10.55288500000006
             };
 
+            var spanien = {
+                lat: 40.46366700000001,
+                lng: -3.7492200000000366
+            };
+
+            var norge = {
+                lat: 59.9138688,
+                lng: 10.752245399999993
+            };
+
             var map = new google.maps.Map(document.querySelector('#map'), {
                 zoom: 4,
-                center: myLatLng2
+                center: spanien
             });
 
-            var marker = new google.maps.Marker({
-                position: myLatLng2,
+
+            var marker1 = new google.maps.Marker({
+                position: australien,
+                map: map,
+                title: 'Hello World!'
+            });
+            var marker2 = new google.maps.Marker({
+                position: samsø,
+                map: map,
+                title: 'Hello World!'
+            });
+            var marker3 = new google.maps.Marker({
+                position: spanien,
+                map: map,
+                title: 'Hello World!'
+            });
+            var marker4 = new google.maps.Marker({
+                position: norge,
                 map: map,
                 title: 'Hello World!'
             });
