@@ -82,7 +82,18 @@
 
             });
 
+            marker3.addListener('click', function () {
+                // 3 seconds after the center of the map has changed, pan back to the
+                // marker.
+                window.setTimeout(function () {
+                    map.panTo(marker3.getPosition());
+                }, 100);
+            });
 
+            marker1.addListener('click', function () {
+                map.setZoom(8);
+                map.setCenter(marker1.getPosition());
+            });
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAvjaJLbieh6savwGmQnJHuYB_w9czaalM&callback=initMap" async defer></script>
