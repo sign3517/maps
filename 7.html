@@ -24,9 +24,8 @@
 </head>
 
 <body>
-
     <div id="map"></div>
-<!--ADD INFO WINDOW-->
+
     <script>
         function initMap() {
             var australien = {
@@ -92,7 +91,7 @@
             });
 
             marker1.addListener('click', function () {
-                map.setZoom(8);
+                map.setZoom(6);
                 map.setCenter(marker1.getPosition());
             });
 
